@@ -1,10 +1,15 @@
 import React from 'react';
 import './main.css';
+import {useSpring, animated} from 'react-spring'
+
 
 function Header() {
+
+    const props = useSpring({opacity: 1, from: {opacity: 0}})
+
   return (
     <div className = 'main'>
-        <section>
+        <animated.section style = {props}>
             <span className = 'mainbox'>
                 <div className = 'halfbox'>
                     <span className = 'image' />
@@ -21,7 +26,7 @@ function Header() {
                     </p>
                 </div>
             </span>
-        </section>
+        </animated.section>
     </div>
   );
 }
