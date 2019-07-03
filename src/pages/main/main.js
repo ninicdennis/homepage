@@ -2,6 +2,8 @@ import React from 'react';
 import './main.css';
 import {useSpring, animated} from 'react-spring'
 
+import Tabs from './../../components/tabs/tabs'
+
 
 function Header() {
 
@@ -10,9 +12,15 @@ function Header() {
   return (
     <div className = 'main'>
         <animated.section style = {props}>
+            <div className = 'tab'>
+                {/* Will eventaully use map to make multiple links. */}
+                <Tabs />
+            </div>
             <span className = 'mainbox'>
                 <div className = 'halfbox'>
-                    <span className = 'image' />
+                    <span className = 'image'>
+                        Icon
+                    </span>
                     <span className = 'title' >
                          Pupperbot
                     </span>
